@@ -4,7 +4,7 @@ import data
 #DEFINICIONES
 # Función para cambiar el valor del parámetro name en el cuerpo de la solicitud
 def get_kit_body(name):
-    # Copiar el diccionario con el cuerpo de la solicitud desde el archivo de datos
+    # Copiar el diccionario con el cuerpo de la solicitud desde el archivo data
     current_body = data.kit_body.copy()
     # Se cambia el valor del parámetro name
     current_body["name"] = name
@@ -15,15 +15,15 @@ def get_kit_body(name):
 def positive_assert(name):
     # El cuerpo de la solicitud actualizada se guarda en la variable kit_body
     kit_body = get_kit_body(name)
-    # El resultado de la solicitud para crear un nuevo usuario o usuaria se guarda en la variable response
+    # El resultado de la solicitud para crear un nuevo kit se guarda en la variable response
     kit_response = sender_stand_request.post_new_client_kit(kit_body)
 
     # Comprueba si el código de estado es 201
     assert kit_response.status_code == 201
-    # Comprueba que el campo authToken está en la respuesta y contiene un valor
+
     assert kit_response.json() != ""
 
-    # Comprobar que el resultado de la solicitud se guarda en users_table_response
+    # Comprobar que el resultado de la solicitud se guarda en kit_body_response
     kit_body_response = sender_stand_request.get_kit_body()
 
     # String que debe estar en el cuerpo de respuesta
@@ -34,7 +34,7 @@ def positive_assert(name):
 
 
 def negative_assert(name):
-    # El cuerpo de la solicitud actualizada se guarda en la variable user_body
+    # El cuerpo de la solicitud actualizada se guarda en la variable kit_body
     kit_body = get_kit_body(name)
 
     # El resultado se guarda en la variable response
@@ -50,7 +50,7 @@ def negative_assert(name):
 
 
 #PRUEBAS
-# Prueba 1. El parámetro name contiene 1 caracteres
+# Prueba 1. El parámetro name contiene 1 caracter
 def test_create_kit_1_character_in_name_get_success_response():
     positive_assert("Aa")
 
@@ -89,16 +89,16 @@ def test_create_user_no_first_name_get_error_response():
 
 # Prueba 9. Error. El parámetro contiene un string vacío
 def test_create_user_empty_first_name_get_error_response():
-    # El cuerpo de la solicitud actualizada se guarda en la variable user_body
+    # El cuerpo de la solicitud actualizada se guarda en la variable kit_body
     kit_body = get_kit_body("")
     # Comprueba la respuesta
     negative_assert(kit_body)
 
-# Prueba 10. Error. El tipo del parámetro firstName: número
+# Prueba 10. Error. El tipo del parámetro name: número
 def test_create_user_number_type_first_name_get_error_response():
-    # El cuerpo de la solicitud actualizada se guarda en la variable user_body
+    # El cuerpo de la solicitud actualizada se guarda en la variable kit_body
     kit_body = get_kit_body(12)
-    # El resultado de la solicitud para crear un nuevo usuario o usuaria se guarda en la variable response
+    # El resultado de la solicitud para crear un nuevo kit se guarda en la variable response
     response = sender_stand_request.post_new_client_kit(kit_body)
 
     # Comprobar el código de estado de la respuesta
