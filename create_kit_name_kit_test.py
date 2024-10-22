@@ -27,7 +27,7 @@ def positive_assert(name):
     kit_body_response = sender_stand_request.get_kit_body()
 
     # String que debe estar en el cuerpo de respuesta
-    str_user = kit_body["name"] + ",,," + kit_response.json()["authToken"]
+    str_user = kit_body["name"]
 
     # Comprueba si el kit existe y es único
     assert kit_body_response.text.count(str_user) == 1
@@ -52,7 +52,7 @@ def negative_assert(name):
 #PRUEBAS
 # Prueba 1. El parámetro name contiene 1 caracter
 def test_create_kit_1_character_in_name_get_success_response():
-    positive_assert("Aa")
+    positive_assert("A")
 
 # Prueba 2. Kit creado con éxito. El parámetro name contiene 511 caracteres
 def test_create_kit_511_characters_in_name_get_success_response():

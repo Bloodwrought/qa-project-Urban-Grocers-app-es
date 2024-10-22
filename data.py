@@ -1,7 +1,7 @@
 #ENCABEZADOS
 headers = {
     "Content-Type": "application/json",
-    "Authorization": "Bearer 0d13763b-150b-4d81-a4a9-ac3e055fb2b9"
+    "Authorization": "Bearer f3ef3e7e-c58c-4b6b-8ca0-b2346855f75c"
 
 }
 
