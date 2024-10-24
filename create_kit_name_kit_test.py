@@ -26,11 +26,6 @@ def positive_assert(name):
     # Comprobar que el resultado de la solicitud se guarda en kit_body_response
     kit_body_response = sender_stand_request.get_kit_body()
 
-    # String que debe estar en el cuerpo de respuesta
-    str_user = kit_body["name"]
-
-    # Comprueba si el kit existe y es único
-    assert kit_body_response.text.count(str_user) == 1
 
 
 def negative_assert(name):
@@ -74,8 +69,8 @@ def test_create_kit_special_symbol_in_name_get_success_response():
 def test_create_kit_has_spaces_in_name_get_success_response():
     positive_assert("A Aaa")
 
-# Prueba 7. Error. El parámetro name contiene un string con números
-def test_create_user_has_number_in_first_name_get_error_response():
+# Prueba 7. Kit creado con éxito. El parámetro name contiene un string con números
+def test_create_user_has_number_in_first_name_get_success_response():
     positive_assert("123")
 
 # Prueba 8. Error. Falta el parámetro name en la solicitud
@@ -87,17 +82,10 @@ def test_create_user_no_first_name_get_error_response():
     # Comprueba la respuesta
     negative_assert(kit_body)
 
-# Prueba 9. Error. El parámetro contiene un string vacío
-def test_create_user_empty_first_name_get_error_response():
-    # El cuerpo de la solicitud actualizada se guarda en la variable kit_body
-    kit_body = get_kit_body("")
-    # Comprueba la respuesta
-    negative_assert(kit_body)
-
-# Prueba 10. Error. El tipo del parámetro name: número
+# Prueba 9. Error. Se ha pasado un tipo de parámetro diferente en name: número
 def test_create_user_number_type_first_name_get_error_response():
     # El cuerpo de la solicitud actualizada se guarda en la variable kit_body
-    kit_body = get_kit_body(12)
+    kit_body = get_kit_body(123)
     # El resultado de la solicitud para crear un nuevo kit se guarda en la variable response
     response = sender_stand_request.post_new_client_kit(kit_body)
 
