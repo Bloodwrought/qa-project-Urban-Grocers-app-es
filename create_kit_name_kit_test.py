@@ -26,7 +26,7 @@ def positive_assert(name):
     # Comprobar que el resultado de la solicitud se guarda en kit_body_response
     kit_body_response = sender_stand_request.get_kit_body()
 
-
+#BORRADO: assert kit_body_response.text.count(str_user) == 1
 
 def negative_assert(name):
     # El cuerpo de la solicitud actualizada se guarda en la variable kit_body
