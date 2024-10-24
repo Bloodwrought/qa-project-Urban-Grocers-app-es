@@ -11,7 +11,7 @@ kit_body = {
     "cardId": 4
 }
 
-#CÓDIGO NUEVO POST-REVISIÓN
+#AÑADIDO: Datos necesarios para crear un usuario.
 user_body = {
     "firstName": "Paul",
     "phone": "+00000000000",

@@ -38,4 +38,3 @@ response = post_new_client_kit(data.kit_body)
 print(response.status_code)
 print(response.json())
 
-#CÓDIGO NUEVO POST-REVISIÓN
