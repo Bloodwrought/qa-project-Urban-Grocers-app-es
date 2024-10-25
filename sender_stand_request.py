@@ -3,7 +3,7 @@ import requests
 import data
 from data import kit_body
 
-#AÑADIDO: CREAR UN USUARIO NUEVO
+
 def get_users_table():
     return requests.get(configuration.URL_SERVICE + configuration.USERS_TABLE_PATH)
 
@@ -20,7 +20,7 @@ print(response.status_code)
 print(response.json())
 
 
-#CÓDIGO ORIGINAL
+
 def get_kit_body():
     return requests.get(configuration.URL_SERVICE + configuration.KITS_PATH,
                          json=kit_body, # Datos a enviar en la solicitud.

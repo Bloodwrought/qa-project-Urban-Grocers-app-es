@@ -1,5 +1,5 @@
 #URL GENERAL
-URL_SERVICE = "https://cnt-45276ebb-9c03-4ea0-a476-9165674dff63.containerhub.tripleten-services.com"
+URL_SERVICE = "https://cnt-64f3b3a8-96b7-467c-b121-22da643a7bea.containerhub.tripleten-services.com"
 
 #PATHS
 KITS_PATH = "/api/v1/kits/"
