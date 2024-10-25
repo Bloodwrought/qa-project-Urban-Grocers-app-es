@@ -9,7 +9,7 @@ Proyecto Sprint 7
 5. En el campo URL_SERVICE cambiar la URL existente por la de un servidor nuevo.
 6. Seleccionar el archivo create_kit_name_kit_test.py
 7. En la barra superior, asegurarse que la lista desplegable al lado del botón de "Play" diga "Current file".
-8. Hacer click en el botón de "Play" o ejecutando el comando "pytest" en la consola.
+8. Hacer click en el botón de "Play" o ejecutando el comando "python -m pytest" en la terminal de Pycharm.
 
 # Lista de comprobación detallando las pruebas automatizadas realizadas al correr el archivo create_name_kit_test
 
