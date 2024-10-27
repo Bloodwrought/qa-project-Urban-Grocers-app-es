@@ -5,11 +5,9 @@ Proyecto Sprint 7
 1. Abrir este proyecto (qa-project-Urban-Grocers-app-es) en PyCharm.
 2. En el botón Python Packages, asegurarse que los paquetes requests y pytest estén descargados y actualizados.
 3. De no estar instalados/actualizados, descargar/actualizar ambos paquetes.
-4. Seleccionar el archivo configuration.py
-5. En el campo URL_SERVICE cambiar la URL existente por la de un servidor nuevo.
-6. Seleccionar el archivo create_kit_name_kit_test.py
-7. En la barra superior, asegurarse que la lista desplegable al lado del botón de "Play" diga "Current file".
-8. Hacer click en el botón de "Play" o ejecutando el comando "python -m pytest" en la terminal de Pycharm.
+4. Seleccionar el archivo configuration.py. En el campo URL_SERVICE, cambiar la URL existente por la de un servidor nuevo.
+5. Seleccionar el archivo create_kit_name_kit_test.py. En la barra superior de PyCharm, asegurarse que la lista desplegable al lado del botón de "Play" diga "Current file".
+6. Hacer click en el botón de "Play" o ejecutando el comando "python -m pytest" en la terminal de Pycharm.
 
 # Lista de comprobación detallando las pruebas automatizadas realizadas al correr el archivo create_name_kit_test
 
